@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jyoti Patel | Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#070707;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* Animated Background */
+    .bg-animation{
+      position:fixed;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      z-index:-2;
+      background:linear-gradient(-45deg,#ff003c,#1a0000,#2b0000,#ff1e56);
+      background-size:400% 400%;
+      animation:gradientBG 12s ease infinite;
+    }
+
+    @keyframes gradientBG{
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+
+    .floating{
+      animation:floating 4s ease-in-out infinite;
+    }
+
+    @keyframes floating{
+      0%{transform:translateY(0px);}
+      50%{transform:translateY(-15px);}
+      100%{transform:translateY(0px);}
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.15);
+    }
+
+    .glow{
+      box-shadow:0 0 20px rgba(255,0,76,0.5);
+    }
+
+    .fade-up{
+      animation:fadeUp 1s ease;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .heart{
+      position:absolute;
+      color:#ff004f;
+      animation:hearts 8s linear infinite;
+      opacity:0.5;
+    }
+
+    @keyframes hearts{
+      0%{
+        transform:translateY(100vh) scale(0);
+      }
+      100%{
+        transform:translateY(-100vh) scale(1.5);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bg-animation"></div>
+
+  <!-- Floating Hearts -->
+  <div class="heart text-3xl left-[10%]">❤</div>
+  <div class="heart text-2xl left-[30%]" style="animation-delay:2s;">❤</div>
+  <div class="heart text-4xl left-[70%]" style="animation-delay:5s;">❤</div>
+  <div class="heart text-2xl left-[90%]" style="animation-delay:1s;">❤</div>
+
+  <!-- Navbar -->
+  <nav class="fixed w-full top-0 z-50 glass">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-red-400">Jyoti Patel</h1>
+
+      <ul class="hidden md:flex gap-8 text-sm font-medium">
+        <li><a href="#home" class="hover:text-red-400 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-red-400 transition">About</a></li>
+        <li><a href="#dream" class="hover:text-red-400 transition">Dream</a></li>
+        <li><a href="#family" class="hover:text-red-400 transition">Family</a></li>
+        <li><a href="#contact" class="hover:text-red-400 transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20">
+
+    <div class="text-center fade-up">
+
+      <div class="floating">
+        <img src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png"
+          class="w-44 mx-auto mb-8 rounded-full border-4 border-red-500 glow p-3 bg-white"/>
+      </div>
+
+      <h2 class="text-5xl md:text-7xl font-extrabold mb-4">
+        Jyoti <span class="text-red-500">Patel</span>
+      </h2>
+
+      <p class="text-xl md:text-2xl text-gray-300 mb-6">
+        Class 9 Student • Future IAS Officer • Dancer
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+
+        <button class="bg-red-600 hover:bg-red-700 px-8 py-3 rounded-full font-semibold transition duration-300 glow">
+          Welcome To My Portfolio
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 px-6">
+
+    <div class="max-w-6xl mx-auto">
+
+      <h2 class="text-4xl font-bold text-center mb-16 text-red-400">
+        About Me
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <div class="glass p-8 rounded-3xl hover:scale-105 transition duration-500">
+          <h3 class="text-2xl font-bold mb-4 text-red-300">My Introduction</h3>
+
+          <p class="text-gray-300 leading-8">
+            Hello! My name is <span class="text-red-400 font-bold">Jyoti Patel</span>.
+            I study in Class 9 and I live in
+            <span class="text-red-400">Karkauni, Naini, Prayagraj</span>.
+
+            I love dancing and expressing creativity through performance.
+            My dream is to become a proud IAS Officer and serve my country with honesty and dedication.
+          </p>
+        </div>
+
+        <div class="glass p-8 rounded-3xl hover:scale-105 transition duration-500">
+          <h3 class="text-2xl font-bold mb-4 text-red-300">Favourite Things</h3>
+
+          <div class="space-y-4 text-gray-300">
+
+            <p>🌹 Favourite Flower: <span class="text-red-400 font-semibold">Rose</span></p>
+
+            <p>🥭 Favourite Fruit:
+              <span class="text-yellow-400 font-semibold">Mango</span>
+            </p>
+
+            <p>❤️ Favourite Colour:
+              <span class="text-red-500 font-semibold">Red</span>
+            </p>
+
+            <p>💃 Hobby:
+              <span class="text-pink-400 font-semibold">Dancing</span>
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Dream Section -->
+  <section id="dream" class="py-20 px-6 bg-black/30">
+
+    <div class="max-w-5xl mx-auto text-center">
+
+      <h2 class="text-4xl font-bold text-red-400 mb-12">
+        My Dream
+      </h2>
+
+      <div class="glass p-10 rounded-3xl hover:scale-105 transition duration-500">
+
+        <div class="text-7xl mb-6 floating">🎓</div>
+
+        <h3 class="text-3xl font-bold mb-4">
+          Future IAS Officer
+        </h3>
+
+        <p class="text-gray-300 leading-8 text-lg">
+          I want to become an IAS Officer in the future.
+          My goal is to work hard, achieve success, and help people through honesty,
+          leadership, and education.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Family -->
+  <section id="family" class="py-20 px-6">
+
+    <div class="max-w-5xl mx-auto">
+
+      <h2 class="text-4xl font-bold text-center text-red-400 mb-16">
+        My Family
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="glass p-8 rounded-3xl text-center hover:-translate-y-3 transition duration-500">
+
+          <div class="text-6xl mb-5">👩</div>
+
+          <h3 class="text-2xl font-bold text-red-300 mb-3">
+            My Mother
+          </h3>
+
+          <p class="text-xl text-gray-300">
+            Mamta
+          </p>
+
+        </div>
+
+        <div class="glass p-8 rounded-3xl text-center hover:-translate-y-3 transition duration-500">
+
+          <div class="text-6xl mb-5">👨</div>
+
+          <h3 class="text-2xl font-bold text-red-300 mb-3">
+            My Father
+          </h3>
+
+          <p class="text-xl text-gray-300">
+            Budda Visal Patel
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 bg-black/40">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+      <h2 class="text-4xl font-bold text-red-400 mb-10">
+        Thank You
+      </h2>
+
+      <div class="glass rounded-3xl p-10">
+
+        <p class="text-xl text-gray-300 leading-8">
+          Thank you for visiting my portfolio website.
+          Keep supporting and inspiring young dreams.
+        </p>
+
+        <div class="mt-8">
+
+          <button class="bg-red-600 hover:bg-red-700 px-10 py-4 rounded-full font-bold text-lg transition duration-300 glow">
+            Jyoti Patel
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-400 border-t border-white/10">
+    © 2026 Jyoti Patel | Designed with ❤️
+  </footer>
+
+</body>
+</html>
