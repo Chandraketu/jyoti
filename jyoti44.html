@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Dumming</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#050505;
+      overflow-x:hidden;
+      color:white;
+    }
+
+    /* Animated Background */
+    .bg-animation{
+      position:fixed;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      z-index:-1;
+      overflow:hidden;
+      background:linear-gradient(135deg,#000000,#0f0f0f,#151515);
+    }
+
+    .circle{
+      position:absolute;
+      border-radius:50%;
+      background:rgba(255,0,0,0.15);
+      animation:float 12s infinite linear;
+      filter:blur(10px);
+    }
+
+    .circle:nth-child(1){
+      width:250px;
+      height:250px;
+      top:10%;
+      left:10%;
+    }
+
+    .circle:nth-child(2){
+      width:300px;
+      height:300px;
+      bottom:5%;
+      right:5%;
+      animation-duration:18s;
+    }
+
+    .circle:nth-child(3){
+      width:180px;
+      height:180px;
+      top:50%;
+      left:60%;
+      animation-duration:15s;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0px) rotate(0deg);
+      }
+      50%{
+        transform:translateY(-40px) rotate(180deg);
+      }
+      100%{
+        transform:translateY(0px) rotate(360deg);
+      }
+    }
+
+    /* Navbar */
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    /* Hero Animation */
+    .hero-img{
+      animation:updown 4s ease-in-out infinite;
+    }
+
+    @keyframes updown{
+      0%,100%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-18px);
+      }
+    }
+
+    .glow-btn{
+      box-shadow:0 0 20px rgba(255,0,0,0.5);
+      transition:0.4s;
+    }
+
+    .glow-btn:hover{
+      transform:scale(1.08);
+      box-shadow:0 0 40px rgba(255,0,0,0.9);
+    }
+
+    .card{
+      transition:0.5s;
+    }
+
+    .card:hover{
+      transform:translateY(-12px) scale(1.03);
+      box-shadow:0 0 25px rgba(255,0,0,0.3);
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar{
+      width:8px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+      background:red;
+      border-radius:20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="glass fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-5">
+      
+      <h1 class="text-3xl font-extrabold text-red-500">
+        <i class="fa-brands fa-youtube"></i> Video Dumming
+      </h1>
+
+      <ul class="hidden md:flex gap-8 text-lg font-medium">
+        <li><a href="#" class="hover:text-red-500 transition">Home</a></li>
+        <li><a href="#" class="hover:text-red-500 transition">Trending</a></li>
+        <li><a href="#" class="hover:text-red-500 transition">Creators</a></li>
+        <li><a href="#" class="hover:text-red-500 transition">Videos</a></li>
+        <li><a href="#" class="hover:text-red-500 transition">Contact</a></li>
+      </ul>
+
+      <button class="bg-red-600 px-6 py-2 rounded-full font-semibold glow-btn">
+        Subscribe
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+      <!-- Left -->
+      <div>
+        <h2 class="text-5xl md:text-7xl font-extrabold leading-tight">
+          Watch <span class="text-red-500">Amazing</span> <br>
+          Videos Online
+        </h2>
+
+        <p class="text-gray-300 mt-6 text-lg leading-relaxed">
+          Video Dumming is a modern animated video platform where creators
+          share trending content, shorts, gaming videos, vlogs and more
+          with a premium experience.
+        </p>
+
+        <div class="flex gap-5 mt-10">
+          <button class="bg-red-600 px-8 py-4 rounded-full text-lg font-bold glow-btn">
+            Explore Now
+          </button>
+
+          <button class="border border-red-500 px-8 py-4 rounded-full text-lg hover:bg-red-600 transition">
+            Live Videos
+          </button>
+        </div>
+
+        <!-- Stats -->
+        <div class="flex gap-10 mt-14">
+          <div>
+            <h3 class="text-4xl font-bold text-red-500">10M+</h3>
+            <p class="text-gray-400">Subscribers</p>
+          </div>
+
+          <div>
+            <h3 class="text-4xl font-bold text-red-500">500K+</h3>
+            <p class="text-gray-400">Daily Views</p>
+          </div>
+
+          <div>
+            <h3 class="text-4xl font-bold text-red-500">24/7</h3>
+            <p class="text-gray-400">Streaming</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="relative flex justify-center">
+        
+        <div class="hero-img relative">
+          <img 
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" 
+            class="rounded-3xl shadow-2xl border border-red-500"
+            alt="Video"
+          >
+
+          <!-- Floating Play Button -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-24 h-24 bg-red-600 rounded-full flex items-center justify-center text-4xl animate-pulse shadow-2xl">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Trending Section -->
+  <section class="py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold">
+          Trending <span class="text-red-500">Videos</span>
+        </h2>
+        <p class="text-gray-400 mt-4">
+          Explore the most viral and popular content.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10">
+
+        <!-- Card 1 -->
+        <div class="glass rounded-3xl overflow-hidden card">
+          <img 
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+            class="w-full h-60 object-cover"
+          >
+
+          <div class="p-6">
+            <h3 class="text-2xl font-bold">
+              Gaming Livestream
+            </h3>
+
+            <p class="text-gray-400 mt-3">
+              Watch exciting gameplay and esports live action.
+            </p>
+
+            <button class="mt-5 bg-red-600 px-5 py-3 rounded-full glow-btn">
+              Watch Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass rounded-3xl overflow-hidden card">
+          <img 
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+            class="w-full h-60 object-cover"
+          >
+
+          <div class="p-6">
+            <h3 class="text-2xl font-bold">
+              Tech Reviews
+            </h3>
+
+            <p class="text-gray-400 mt-3">
+              Latest gadgets, smartphones and AI technology videos.
+            </p>
+
+            <button class="mt-5 bg-red-600 px-5 py-3 rounded-full glow-btn">
+              Watch Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass rounded-3xl overflow-hidden card">
+          <img 
+            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop"
+            class="w-full h-60 object-cover"
+          >
+
+          <div class="p-6">
+            <h3 class="text-2xl font-bold">
+              Creative Vlogs
+            </h3>
+
+            <p class="text-gray-400 mt-3">
+              Discover amazing lifestyle and travel experiences.
+            </p>
+
+            <button class="mt-5 bg-red-600 px-5 py-3 rounded-full glow-btn">
+              Watch Now
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Creator Section -->
+  <section class="py-20 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+      <div>
+        <img 
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop"
+          class="rounded-3xl shadow-2xl border border-red-500"
+        >
+      </div>
+
+      <div>
+        <h2 class="text-5xl font-bold">
+          Become A <span class="text-red-500">Creator</span>
+        </h2>
+
+        <p class="text-gray-400 mt-6 leading-relaxed text-lg">
+          Upload your content, grow your audience and become the next
+          digital superstar with Video Dumming platform.
+        </p>
+
+        <div class="mt-10 space-y-5">
+
+          <div class="glass p-5 rounded-2xl">
+            <h3 class="text-2xl font-semibold">
+              <i class="fa-solid fa-video text-red-500"></i> HD Streaming
+            </h3>
+          </div>
+
+          <div class="glass p-5 rounded-2xl">
+            <h3 class="text-2xl font-semibold">
+              <i class="fa-solid fa-users text-red-500"></i> Huge Audience
+            </h3>
+          </div>
+
+          <div class="glass p-5 rounded-2xl">
+            <h3 class="text-2xl font-semibold">
+              <i class="fa-solid fa-chart-line text-red-500"></i> Fast Growth
+            </h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-800 py-10 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+
+      <h1 class="text-3xl font-bold text-red-500">
+        <i class="fa-brands fa-youtube"></i> Video Dumming
+      </h1>
+
+      <div class="flex gap-6 text-2xl">
+        <a href="#" class="hover:text-red-500 transition">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="#" class="hover:text-red-500 transition">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#" class="hover:text-red-500 transition">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+
+        <a href="#" class="hover:text-red-500 transition">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+
+      <p class="text-gray-500">
+        © 2026 Video Dumming. All Rights Reserved.
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>s
